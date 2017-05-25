@@ -28,7 +28,7 @@ var computerChoices = ["a", "b"/*, "c", "d"*/
 //When user presses key run function
 document.onkeyup = function (event) {
     var userGuess = event.key;
-//randomly selecte letter out of computerChoices var above    
+//randomly selects letter out of computerChoices var above    
     var computerRandom = computerChoices[Math.floor(Math.random() * computerChoices.length)];
   console.log(computerRandom)
 
@@ -43,16 +43,24 @@ document.onkeyup = function (event) {
 //if guesses gets to 0 then add to losses count
     if (guesses === 0) {
       losses++;
+      //reload page if losses = 0
+      //false = from users cache
+      //true = from server
+      location.reload(true);
 
     }
-
+/*
 //as var wins/losses/guess change update in html document
     document.querySelector("wins").innerHTML = wins;
     document.querySelector("losses").innerHTML = losses;
-    document.querySelector("guessesLeft").innerHTML = guesses;
-  }
-}
-};
+    document.querySelector("guessesLeft").innerHTML = guesses; */
+
+    //Different way to display????
+    document.getElementById("wins").innerHTML = wins
+    document.getElementById("losses").innerHTML = losses
+    document.getElementById("guessesLeft").innerHTML = guesses
+  }; //end of document.onkeyup
+
 
 // You Just Guessed:      WORKING
 
