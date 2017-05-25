@@ -32,11 +32,6 @@ document.onkeyup = function (event) {
     var computerRandom = computerChoices[Math.floor(Math.random() * computerChoices.length)];
   console.log(computerRandom)
 
-
-for (var i = 0; i < computerChoices.length; i++){
-
-  if (userGuess === computerChoices[i]) {
-
 //if userGuess = computer randomly selected letter then add to wins
     if (userGuess === computerRandom) {
       wins++;
