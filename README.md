@@ -2,6 +2,7 @@
 Homework 2 part 1
 
 # Requirements
+As outlined in homework
 
 # Purpose:
 
